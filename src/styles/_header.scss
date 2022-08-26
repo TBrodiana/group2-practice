@@ -1,0 +1,117 @@
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  /* border: none; */
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+body {
+  font-family: 'Raleway', sans-serif;
+  color: $black;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+/* ------------------------------------ */
+.wrapper {
+  display: grid;
+  min-height: 100vh;
+  grid-template: minmax(100px, auto) 1fr minmax(70px, auto) / 1fr;
+  grid-template-areas:
+            "header"
+            "content1"
+            "content";
+  align-content: stretch;
+}
+
+/* //--------header---------- */
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+    &__container {
+      grid-area: header;
+      margin: 0 auto;
+      padding: 0 15px;
+      min-height: 85px;
+      background: $black;
+      display: grid;
+      grid-auto-flow: column;
+      align-items: center;
+      justify-content: space-around; 
+
+        .logo__container {
+          position: relative;
+          width: 100px;
+          height: 45px;
+          display: grid;
+          grid-template-rows: repeat(2, 1fr);
+          grid-template-columns: repeat(3, 1fr);
+          margin: 10px auto;
+
+          .logo__icon {
+            position: relative;
+            height: 35px;
+            grid-column: 1/2;
+            grid-row: 1/2;
+          }
+
+          .logo__icon img{
+            padding: 0;
+          }
+
+          .logo__upper_text {
+            grid-column: 2/4;
+            grid-row: 1/2;
+            align-self: end;
+            padding: 0;
+            @include fontProp(22px, 600, 1px, $white);
+          }
+
+          .logo__upper_letter{
+            font-size: 25px;
+            padding: 0;
+          }
+
+          .logo__lower_text {
+            grid-column: 1/4;
+            grid-row: 2/3;
+            text-align: justify;
+            text-transform: uppercase;
+            padding: 0;
+            @include fontProp(13px, 500, 3px, $yellow);
+          }
+        }
+
+        &__nav {
+          display: grid;
+        }
+
+        &__nav_menu {
+          display: grid;
+          grid-auto-flow: column;
+          grid-column: 2/4;
+          grid-row: 1/2;
+            .nav_item {
+              padding: 0 15px;
+              @include fontProp(15px, 400, 2px, $grey);
+            }
+        }
+    }
+
+
+}
+

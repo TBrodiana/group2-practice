@@ -1,5 +1,13 @@
-$font-size: 1rem;
-$font-family: 'Inter', sans-serif;
-$background-color: #121212;
-$font-color: #dae0e0;
-$page-width: 650px;
+//colors:
+$black: rgb(22,22,22);
+$yellow: #f1c917;
+$grey: #b0b0b0;
+$white: #fff;
+
+@mixin fontProp($fs, $fw, $ls, $c){
+  font-size: $fs;
+  font-weight: $fw;
+  letter-spacing: $ls;
+  color: $c;
+}
+
