@@ -1,13 +1,13 @@
 //colors:
 $black: rgb(22,22,22);
-$yellow: #f1c917;
-$grey: #b0b0b0;
-$white: #fff;
+$yellow: rgb(241,201,23);
+$grey: rgb(176,176,176);
+$white: rgb(255,255,255);
 
 @mixin fontProp($fs, $fw, $ls, $c){
-  font-size: $fs;
-  font-weight: $fw;
-  letter-spacing: $ls;
-  color: $c;
+  #{font-size}: $fs;
+  #{font-weight}: $fw;
+  #{letter-spacing}: $ls;
+  #{color}: $c;
 }
 
