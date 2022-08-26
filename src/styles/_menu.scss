@@ -1,0 +1,48 @@
+.menu{
+    background-image: url("assets/img/bg_4.jpg");
+    // text-align: center;
+    h2{
+        color: white;
+        // text-align: center;
+    }
+    h3{
+        color: white;
+        text-align: start;
+    }
+    p{
+        text-align: start;
+    }
+    span{
+        color: yellow;
+    }
+    .menu__text{
+        width: 50%;
+        margin: 0 auto;
+        // text-align: center;
+    }
+    .menu__container{
+        .menu__card{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            img{
+                width: 100%;
+            }
+        }
+    }
+    .card__description{
+        background-color: hsla(0, 0, 0, 30%);
+        text-align: start !important;
+        // font-size: 50px;
+        padding: 5%;
+    }
+    button{
+        border: 1px solid white;
+        background-color: black;
+        color: white;
+        padding: 6px 8px;
+        opacity: 100%;
+        margin-left: 10px;
+    }
+}
+
+
