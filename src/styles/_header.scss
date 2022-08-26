@@ -51,7 +51,8 @@ li {
       display: grid;
       grid-auto-flow: column;
       align-items: center;
-      justify-content: space-around;
+      justify-content: space-around; 
+
         .logo__container {
           position: relative;
           width: 100px;
@@ -60,15 +61,18 @@ li {
           grid-template-rows: repeat(2, 1fr);
           grid-template-columns: repeat(3, 1fr);
           margin: 10px auto;
+
           .logo__icon {
             position: relative;
             height: 35px;
             grid-column: 1/2;
             grid-row: 1/2;
           }
+
           .logo__icon img{
             padding: 0;
           }
+
           .logo__upper_text {
             grid-column: 2/4;
             grid-row: 1/2;
@@ -76,11 +80,12 @@ li {
             padding: 0;
             @include fontProp(22px, 600, 1px, $white);
           }
+
           .logo__upper_letter{
             font-size: 25px;
             padding: 0;
-
           }
+
           .logo__lower_text {
             grid-column: 1/4;
             grid-row: 2/3;
@@ -94,18 +99,16 @@ li {
         &__nav {
           display: grid;
         }
-        &__nav_container {
 
-        }
         &__nav_menu {
           display: grid;
           grid-auto-flow: column;
           grid-column: 2/4;
           grid-row: 1/2;
-          .nav_item {
-            padding: 0 15px;
-            @include fontProp(15px, 400, 2px, $grey);
-          }
+            .nav_item {
+              padding: 0 15px;
+              @include fontProp(15px, 400, 2px, $grey);
+            }
         }
     }
 
