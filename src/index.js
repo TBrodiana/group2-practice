@@ -7,20 +7,57 @@ import webpackLogo from '@/images/webpack-logo.svg'
 // Test import of styles
 import '@/styles/index.scss'
 
-// Appending to the DOM
-const logo = document.createElement('img')
-logo.src = webpackLogo
+// // Appending to the DOM
+// const logo = document.createElement('img')
+// logo.src = webpackLogo
 
-const heading = document.createElement('h1')
-heading.textContent = example()
+// const heading = document.createElement('h1')
+// heading.textContent = example()
 
-// Test a background image url in CSS
-const imageBackground = document.createElement('div')
-imageBackground.classList.add('image')
+// // Test a background image url in CSS
+// const imageBackground = document.createElement('div')
+// imageBackground.classList.add('image')
 
-// Test a public folder asset
-const imagePublic = document.createElement('img')
-imagePublic.src = '/assets/example.png'
+// // Test a public folder asset
+// const imagePublic = document.createElement('img')
+// imagePublic.src = '/assets/example.png'
 
-const app = document.querySelector('#root')
-app.append(logo, heading, imageBackground, imagePublic)
+// const app = document.querySelector('#root')
+// app.append(logo, heading, imageBackground, imagePublic)
+
+let divsMenuCard = document.querySelectorAll(".menu__card");
+
+function changeMenuCard (){
+    if(document.documentElement.clientWidth <= 743){
+        for (let i = 0; i < divsMenuCard.length; i++) {
+            if(i%2 == 0){
+                divsMenuCard[i].classList.remove("card2");
+                divsMenuCard[i].classList.add("card1");
+            }else{
+                divsMenuCard[i].classList.remove("card1");
+                divsMenuCard[i].classList.add("card2");
+            }
+        }
+    }else if(document.documentElement.clientWidth <= 1043){
+        for (let i = 0; i < divsMenuCard.length; i++) {
+            divsMenuCard[i].classList.remove("card2");
+            divsMenuCard[i].classList.add("card1");
+        }
+        for (let i = 2; i < 4; i++) {
+            divsMenuCard[i].classList.remove("card1");
+            divsMenuCard[i].classList.add("card2");
+        }
+    }else if(document.documentElement.clientWidth > 1043){
+        for (let i = 0; i < 3; i++) {
+            divsMenuCard[i].classList.remove("card2");
+            divsMenuCard[i].classList.add("card1");
+        }
+        for (let i = 3; i < 6; i++) {
+            divsMenuCard[i].classList.remove("card1");
+            divsMenuCard[i].classList.add("card2");
+        }
+    }
+}
+
+window.addEventListener('resize', changeMenuCard);
+window.addEventListener('load', changeMenuCard);
