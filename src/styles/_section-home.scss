@@ -1,5 +1,6 @@
 
 /* ------------------HOME---------------------------- */
+/*Стили для демонстрации*/
 .home__container{
   height: 100vh;
   width:100%;
@@ -45,11 +46,11 @@
 }
 .slider .slick-arrow.slick-prev{
   left: 0;
-  background: url("assets/img/sl-arrow_l.svg") 0 0 / 100% no-repeat;
+  background: url('assets/img/sl-arrow_l.svg') 0 0 / 100% no-repeat;
 }
 .slider .slick-arrow.slick-next{
   right: 0;
-  background: url("assets/img/sl-arrow_r.svg") 0 0 / 100% no-repeat;
+  background: url('assets/img/sl-arrow_r.svg') 0 0 / 100% no-repeat;
 }
 .slider .slick-arrow.slick-disabled{
   opacity: 0.2;
@@ -169,8 +170,6 @@
   color:rgb(30, 30, 30);
   background: #f1c917;
   border: 1px solid #f1c917;
-
-
 }
 .btn-view {
   color:#fff;
@@ -185,7 +184,7 @@
   z-index: 7;
   width: 30px;
   height: 30px;
-  background-color: rgb(62, 217, 10);
+  background-color: rgb(217, 10, 10);
   border-radius: 50%;
   left: 50%;
 }
@@ -218,3 +217,6 @@
   z-index: 7;
   align-items: center;
 }
+
+
+
