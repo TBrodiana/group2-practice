@@ -2,8 +2,9 @@
 import { example } from '@/js/example'
 
 //Slider JS files (added by Tetiana)
+import 'js/_jquery.min'
 import 'js/_slick.min'
-import 'js/_slick.min'
+import 'js/_script'
 // Test import of an asset
 import webpackLogo from '@/images/webpack-logo.svg'
 
