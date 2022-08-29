@@ -41,15 +41,41 @@
     </header>
     <section id="home" class="home">
       <div class="home__container">
-        <div class="home_slide-1">
-          <div class="slide_text-content">
-            <h2 class="caption-italic"><em>Welcome</em></h2>
-            <h1 class="caption-main">We cooked your desired pizza recipe</h1>
-            <p class="caption-else">A small river Duden flows by their place and supplies it with the necessary regelialia.</p>
+        <div class="slider">
+          <div class="slider__item home_slide-1 filter">
+            <div class="slide_text-content">
+              <h2 class="caption-italic"><em>Welcome</em></h2>
+              <h1 class="caption-main">We cooked your desired pizza recipe</h1>
+              <p class="caption-else">A small river Duden flows by their place and supplies it with the necessary regelialia.</p>
+              <div class="slide-btns">
+                <button class="slide-btn btn-order">Order Now</button>
+                <button class="slide-btn btn-view">View Menu</button>
+              </div>
+            </div>
           </div>
-          <div class="slide-btns">
-            <button class="slide-btn btn-order">Order Now</button>
-            <button class="slide-btn btn-view">View Menu</button>
+          <div class="slider__item home_slide-2">
+            <img class="slide-img-2" src="assets/img/bg_2.png" alt="pizza-italian">
+            <div class="slide_text-content">
+              <h2 class="caption-italic"><em>Crunchy</em></h2>
+              <h1 class="caption-main">Italian pizza</h1>
+              <p class="caption-else">A small river Duden flows by their place and supplies it with the necessary regelialia.</p>
+              <div class="slide-btns">
+                <button class="slide-btn btn-order">Order Now</button>
+                <button class="slide-btn btn-view">View Menu</button>
+              </div>
+            </div>
+          </div>
+          <div class="slider__item home_slide-3 filter">
+            <img class="slide-img-3" src="assets/img/bg_1.png" alt="italian-cuizine">
+            <div class="slide_text-content">
+              <h2 class="caption-italic"><em>Delicious</em></h2>
+              <h1 class="caption-main">Italian cuizine</h1>
+              <p class="caption-else">A small river Duden flows by their place and supplies it with the necessary regelialia.</p>
+              <div class="slide-btns">
+                <button class="slide-btn btn-order">Order Now</button>
+                <button class="slide-btn btn-view">View Menu</button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -60,6 +86,11 @@
     <section id="about" class="about"></section>
     <section id="contact" class="contact"></section>
   </div>
-
+  <!-- Подключаем jQuery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <!-- Подключаем слайдер Slick -->
+  <script src="js/_slick.min.js"></script>
+  <!-- Подключаем файл скриптов -->
+  <script src="js/_script.js"></script>
   </body>
 </html>
