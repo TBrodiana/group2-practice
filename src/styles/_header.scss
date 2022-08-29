@@ -105,11 +105,12 @@ li {
           grid-auto-flow: column;
           grid-column: 2/4;
           grid-row: 1/2;
-            a {
-              padding: 0 15px;
-              @include fontProp(15px, 400, 2px, $grey);
-            }
+
         }
+      .nav_item {
+        padding: 0 15px;
+        @include fontProp(15px, 400, 2px, $grey);
+      }
     }
 
 
