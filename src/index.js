@@ -1,16 +1,17 @@
 // Test import of a JavaScript module
-import { example } from '@/js/example'
+//import { example } from '@/js/example'
 
 //Slider JS files (added by Tetiana)
-import 'js/_slick.min'
-import 'js/_script'
-
-
-// Test import of an asset
-import webpackLogo from '@/images/webpack-logo.svg'
+import 'js/_slick.min';
+import 'js/_script';
 
 // Test import of styles
-import '@/styles/index.scss'
+import '@/styles/index.scss';
+
+// Test import of an asset
+//import webpackLogo from '@/images/webpack-logo.svg'
+
+
 
 // // Appending to the DOM
 // const logo = document.createElement('img')
@@ -29,40 +30,3 @@ import '@/styles/index.scss'
 
 // const app = document.querySelector('#root')
 // app.append(logo, heading, imageBackground, imagePublic)
-
-let divsMenuCard = document.querySelectorAll(".menu__card");
-
-function changeMenuCard (){
-    if(document.documentElement.clientWidth <= 743){
-        for (let i = 0; i < divsMenuCard.length; i++) {
-            if(i%2 == 0){
-                divsMenuCard[i].classList.remove("card2");
-                divsMenuCard[i].classList.add("card1");
-            }else{
-                divsMenuCard[i].classList.remove("card1");
-                divsMenuCard[i].classList.add("card2");
-            }
-        }
-    }else if(document.documentElement.clientWidth <= 1043){
-        for (let i = 0; i < divsMenuCard.length; i++) {
-            divsMenuCard[i].classList.remove("card2");
-            divsMenuCard[i].classList.add("card1");
-        }
-        for (let i = 2; i < 4; i++) {
-            divsMenuCard[i].classList.remove("card1");
-            divsMenuCard[i].classList.add("card2");
-        }
-    }else if(document.documentElement.clientWidth > 1043){
-        for (let i = 0; i < 3; i++) {
-            divsMenuCard[i].classList.remove("card2");
-            divsMenuCard[i].classList.add("card1");
-        }
-        for (let i = 3; i < 6; i++) {
-            divsMenuCard[i].classList.remove("card1");
-            divsMenuCard[i].classList.add("card2");
-        }
-    }
-}
-
-window.addEventListener('resize', changeMenuCard);
-window.addEventListener('load', changeMenuCard);
