@@ -1,5 +1,7 @@
 
 /* ------------------HOME---------------------------- */
+
+/*Стили для демонстрации*/
 .home__container{
   height: 100vh;
   width:100%;
@@ -14,10 +16,12 @@
 .slick-slider{
   min-width: 0;
 }
+
 /* Ограничивающая оболочка */
 .slick-list {
   overflow: hidden;
 }
+
 /* Лента слайдов */
 .slick-track{
   display: flex;
@@ -45,11 +49,11 @@
 }
 .slider .slick-arrow.slick-prev{
   left: 0;
-  background: url("assets/img/sl-arrow_l.svg") 0 0 / 100% no-repeat;
+  background: url('assets/img/sl-arrow_l.svg') 0 0 / 100% no-repeat;
 }
 .slider .slick-arrow.slick-next{
   right: 0;
-  background: url("assets/img/sl-arrow_r.svg") 0 0 / 100% no-repeat;
+  background: url('assets/img/sl-arrow_r.svg') 0 0 / 100% no-repeat;
 }
 .slider .slick-arrow.slick-disabled{
   opacity: 0.2;
@@ -66,7 +70,7 @@
   min-height: 100vh;
   width: 100%;
   z-index: 1;
-  margin: 0 auto;
+  //margin: 0px auto;
   margin: 60px auto;
 }
 .slider__item:after{
@@ -80,15 +84,15 @@
   z-index: 2;
 }
 .home_slide-1{
-  background: url("assets/img/bg_3.jpg") center no-repeat;
+  background: url('assets/img/bg_3.jpg') center no-repeat;
   grid-template-columns: 1fr;
 }
 .home_slide-2{
-  background: url("assets/img/bg_1.jpg") center no-repeat;
+  background: url('assets/img/bg_1.jpg') center no-repeat;
 
 }
 .home_slide-3{
-  background: url("assets/img/bg_1.jpg") center no-repeat;
+  background: url('assets/img/bg_1.jpg') center no-repeat;
 
 }
 .slider__item img{
@@ -169,8 +173,6 @@
   color:rgb(30, 30, 30);
   background: #f1c917;
   border: 1px solid #f1c917;
-
-
 }
 .btn-view {
   color:#fff;
@@ -182,19 +184,20 @@
   align-items: center;
   justify-content: center;
   align-self: center;
+  position: relative;
   z-index: 7;
-  width: 30px;
-  height: 30px;
-  background-color: rgb(62, 217, 10);
+  width: 15px;
+  height: 15px;
+  background-color: rgb(217, 10, 10);
   border-radius: 50%;
   left: 50%;
 }
-.slider .slick-dots{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 7;
-}
+/* .slider .slick-dots{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 7;
+} */
 .slider .slick-dots li{
   list-style: none;
   margin: 0px 10px;
@@ -204,12 +207,8 @@
   font-size: 0;
   width: 10px;
   height: 10px;
-  background-color: rgb(236, 11, 11);
+  background-color: rgb(252, 252, 252);
   border-radius: 50%;
-  z-index: 7;
-  align-items: center;
-  justify-content: center;
-  align-self: center;
 }
 
 .slider .slick-dots li.slick-active button{
