@@ -2,8 +2,8 @@
 //import { example } from '@/js/example'
 
 //Slider JS files (added by Tetiana)
-import 'js/_slick.min';
-import 'js/_script';
+/*import 'js/_slick.min';
+import 'js/_script';*/
 
 // Test import of styles
 import 'styles/index.scss';
