@@ -12,18 +12,18 @@ body {
   height: 100%;
   min-width: 320px;
 }
-body {
+body{
   font-family: 'Raleway', sans-serif;
-  color: $black;
+  color: rgb(22,22,22);
 }
-a {
+a{
   text-decoration: none;
 }
-li {
+li{
   list-style: none;
 }
 /* ------------------------------------ */
-.wrapper {
+.wrapper{
   display: grid;
   min-height: 100vh;
   grid-template: minmax(100px, auto) 1fr minmax(70px, auto) / 1fr;
@@ -46,12 +46,11 @@ li {
       margin: 0 auto;
       padding: 0 15px;
       min-height: 85px;
-      background: $black;
+      background: rgb(22,22,22);
       display: grid;
       grid-auto-flow: column;
       align-items: center;
-      justify-content: space-around; 
-
+      justify-content: space-around;
         .logo__container {
           position: relative;
           width: 100px;
