@@ -1,5 +1,7 @@
 // Test import of a JavaScript module
-//import { example } from '@/js/example'
+// import { example } from '@/js/example'
+// import { menu } from '@/js/menu'
+import "js/menu.js"
 
 //Slider JS files (added by Tetiana)
 // import 'js/slick.min';
