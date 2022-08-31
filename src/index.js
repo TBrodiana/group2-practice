@@ -3,11 +3,17 @@
 // import { menu } from '@/js/menu'
 import "js/menu.js"
 
-// Test import of an asset
-import webpackLogo from '@/images/webpack-logo.svg'
+//Slider JS files (added by Tetiana)
+// import 'js/slick.min';
+// import 'js/script';
 
 // Test import of styles
-import '@/styles/index.scss'
+import '@/styles/index.scss';
+
+// Test import of an asset
+//import webpackLogo from '@/images/webpack-logo.svg'
+
+
 
 // // Appending to the DOM
 // const logo = document.createElement('img')
@@ -26,4 +32,3 @@ import '@/styles/index.scss'
 
 // const app = document.querySelector('#root')
 // app.append(logo, heading, imageBackground, imagePublic)
-
