@@ -3,6 +3,7 @@ $black: rgb(22,22,22);
 $yellow: rgb(241,201,23);
 $grey: rgb(176,176,176);
 $white: rgb(255,255,255);
+$backgroundMenu: url("assets/img/bg_4.jpg") center no-repeat;
 
 @mixin fontProp($fs, $fw, $ls, $c){
   #{font-size}: $fs;
