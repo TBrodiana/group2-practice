@@ -23,16 +23,16 @@ li{
   list-style: none;
 }
 /* ------------------------------------ */
-.wrapper{
-  display: grid;
-  min-height: 100vh;
-  //grid-template: minmax(100px, auto) 1fr minmax(70px, auto) / 1fr;
-  //grid-template-areas:
-  //          "header"
-  //          "content1"
-  //          "content";
-  align-content: stretch;
-}
+//.wrapper{
+//  display: grid;
+//  min-height: 100vh;
+//  //grid-template: minmax(100px, auto) 1fr minmax(70px, auto) / 1fr;
+//  //grid-template-areas:
+//  //          "header"
+//  //          "content1"
+//  //          "content";
+//  align-content: stretch;
+//}
 
 /* //----------------header----------------- */
 .header {
