@@ -1,0 +1,92 @@
+.contact {
+  background-color: black;
+  max-height: 100vh;
+
+  .contact__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .contact__form__container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding-left: 10%;
+      padding-right: 25%;
+      padding-top: 15%;
+      height: max-content;
+
+      .contact__title {
+        margin-bottom: 50px;
+
+          h2 {
+            font-family: 'Raleway', sans-serif;
+            color: white;
+            text-align: center;
+            font-size: 26px;
+            text-transform: none;
+            letter-spacing: 1px;
+          }
+
+          .bigger__letter {
+            font-size: 35px;
+          }
+      }
+      .form__container {
+        width: 100%;
+
+        .form__input_container {
+          margin-bottom: 45px;
+
+            label {
+              font-family: 'Raleway', sans-serif;
+              color: white;
+              font-size: 14px;
+              text-transform: none;
+              letter-spacing: 1px;
+              display: table;
+              border-collapse: separate;
+              margin-bottom: 10px;
+            }
+
+            input, textarea {
+              border: none;
+              display: table;
+              border-collapse: separate;
+              width: 100%;
+              background-color: black;
+              border-bottom: 1px solid rgba(169, 169, 169, 0.4);
+              font-family: 'Raleway', sans-serif;
+              color: white;
+              font-size: 16px;
+            }
+
+            textarea {
+              display: inline-block;
+              min-height: 50px;
+              max-height: 120px;
+              max-width: 625px;
+            }
+        }
+
+        .form__container > form > div:nth-child(3) {
+          margin-bottom: 10px;
+        }
+
+        .form__container > form > div:nth-child(2) {
+          margin-bottom: 25px;
+        }
+
+        button {
+          cursor: pointer;
+          border: none;
+          background-color: #ffc36b;
+          font-family: 'Raleway', sans-serif;
+          color: black;
+          font-size: 16px;
+          width: 95px;
+          height: 60px;
+        }
+      }
+    }
+  }
+}

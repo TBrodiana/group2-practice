@@ -5,6 +5,7 @@ import { example } from '@/js/example'
 import 'js/slider';
 //Строчка следующая очень важная, это подключение menu.js. Не удаляйте, пожалуйста, а то не будет работать меню и адаптив
 import 'js/menu';
+import 'js/contact';
 // Test import of styles
 import '@/styles/index.scss';
 
