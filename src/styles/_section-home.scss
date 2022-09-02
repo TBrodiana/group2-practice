@@ -112,11 +112,11 @@ body{
               background: #f1c917;
               border: 1px solid #f1c917;
 
-              &:active {
+              &:active, &:hover {
                 color: rgb(30, 30, 30);
                 background: #fac002;
                 border: 1px solid #fac002;
-                box-shadow: 10px 5px 5px #6b4d04;
+                box-shadow: 2px 2px #3b2a02;
 
               }
             }
@@ -124,11 +124,13 @@ body{
               color: #fff;
               border: 1px solid #fff;
               background: rgba(0, 0, 0, 0);
-              &:active {
+              &:active, &:hover {
+                color: #000000;
                 background: #fff;
-                box-shadow: 10px 5px 5px #6b4d04;
-
+                box-shadow: 2px 2px #3b2a02;
               }
+
+
             }
           }
       }
