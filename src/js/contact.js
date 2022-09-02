@@ -10,3 +10,30 @@ form.addEventListener("submit", function (e){
     lastName.value = "";
     message.value = "";
 })
+
+form.addEventListener("invalid", eventHandler, true);
+function eventHandler(e){
+    if (e.target.tagName !== "INPUT" && e.target.tagName !== "TEXTAREA" ){
+        return;
+    }
+    setValidity(e.target);
+}
+function setValidity(input){
+    if (input.validity.valueMissing && input.name === "first__name"){
+        input.setCustomValidity("Please, enter your first name");
+    }
+    else if (input.validity.valueMissing && input.name === "message"){
+        input.setCustomValidity("Please, enter your message");
+    }
+    else{
+        input.setCustomValidity("");
+    }
+}
+
+firstName.addEventListener("input", function (){
+    firstName.setCustomValidity("");
+})
+
+message.addEventListener("input", function (){
+    message.setCustomValidity("");
+})
