@@ -2,7 +2,9 @@
 import { example } from '@/js/example'
 
 //Slider JS files (added by Tetiana)
+import 'js/header';
 import 'js/slider';
+
 //Строчка следующая очень важная, это подключение menu.js. Не удаляйте, пожалуйста, а то не будет работать меню и адаптив
 import 'js/menu';
 import 'js/contact';

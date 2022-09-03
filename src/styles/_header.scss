@@ -22,6 +22,18 @@ a{
 li{
   list-style: none;
 }
+//colors:
+$black: rgb(22,22,22);
+$yellow: rgb(241,201,23);
+$grey: rgb(176,176,176);
+$white: rgb(255,255,255);
+
+@mixin fontProp($fs, $fw, $ls, $c){
+  #{font-size}: $fs;
+  #{font-weight}: $fw;
+  #{letter-spacing}: $ls;
+  #{color}: $c;
+}
 /* ------------------------------------ */
 //.wrapper{
 //  display: grid;
@@ -41,87 +53,87 @@ li{
   top: 0;
   left: 0;
   z-index: 50;
-    &__container {
-      grid-area: header;
-      margin: 0 auto;
-      padding: 0 15px;
-      min-height: 85px;
-      background: rgb(22,22,22);
+  &__container {
+    grid-area: header;
+    margin: 0 auto;
+    padding: 0 15px;
+    min-height: 85px;
+    background: rgb(22,22,22);
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-around;
+    .logo__container {
+      position: relative;
+      width: 100px;
+      height: 45px;
       display: grid;
-      grid-auto-flow: column;
-      align-items: center;
-      justify-content: space-around;
-        .logo__container {
-          position: relative;
-          width: 100px;
-          height: 45px;
-          display: grid;
-          grid-template-rows: repeat(2, 1fr);
-          grid-template-columns: repeat(3, 1fr);
-          margin: 10px auto;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      margin: 10px auto;
 
-          .logo__icon {
-            position: relative;
-            height: 35px;
-            grid-column: 1/2;
-            grid-row: 1/2;
-          }
+      img {
+        position: relative;
+        height: 35px;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        padding: 0;
+      }
 
-          .logo__icon img{
-            padding: 0;
-          }
-
-          .logo__upper_text {
-            grid-column: 2/4;
-            grid-row: 1/2;
-            color: #fff;
-            font-size: 22px;
-            letter-spacing: 1px;
-            font-weight: 600;
-            align-self: end;
-            padding: 0px;
-            //@include fontProp(22px, 600, 1px, $white);
-          }
-
-          .logo__upper_letter{
-            font-size: 25px;
-            padding: 0;
-          }
-
-          .logo__lower_text {
-            grid-column: 1/4;
-            grid-row: 2/3;
-            color: #f1c917;
-            font-size: 13px;
-            letter-spacing: 3px;
-            font-weight: 500;
-            text-align: justify;
-            text-transform: uppercase;
-            padding: 0;
-            //@include fontProp(13px, 500, 3px, $yellow);
-          }
+      h3 {
+        grid-column: 2/4;
+        grid-row: 1/2;
+        align-self: end;
+        padding: 0px;
+        @include fontProp(22px, 600, 1px, $white);
+        span{
+          font-size: 25px;
+          padding: 0;
         }
+      }
 
-        &__nav {
-          display: grid;
-        }
 
-        &__nav_menu {
-          display: grid;
-          grid-auto-flow: column;
-          grid-column: 2/4;
-          grid-row: 1/2;
-
-        }
-      .nav_item {
-        padding: 0 15px;
-        color: #b0b0b0;
-        font-size: 15px;
-        font-weight: 400;
-        //@include fontProp(15px, 400, 2px, $grey);
+      h4 {
+        grid-column: 1/4;
+        grid-row: 2/3;
+        text-align: justify;
+        text-transform: uppercase;
+        padding: 0;
+        @include fontProp(13px, 500, 3px, $yellow);
       }
     }
 
+
+      nav{
+        display: grid;
+        ul{
+          display: grid;
+
+          li {
+            display: grid;
+            grid-row: 1/2;
+
+            a {
+              padding: 0 15px;
+              @include fontProp(15px, 400, 2px, $grey);
+            }
+
+            a.active {
+              color: $yellow;
+            }
+          }
+
+        }
+      }
+
+
+
+
+  }
+
+  a.active {
+    color: $yellow;
+  }
 
 }
 
