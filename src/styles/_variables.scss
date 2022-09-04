@@ -13,3 +13,60 @@ $backgroundMenu: url("assets/img/bg_4.jpg") center no-repeat;
 //  #{color}: $c;
 //}
 
+%text{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    color: $grey;
+    margin-top: 1vw;
+    margin-bottom: 4vw;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+%img{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    height:100%;
+    object-fit: cover;
+}
+
+%h2{
+    color: $white;
+    text-align: center;
+    font-size: 26px;
+}
+
+%button{
+    border: 1px solid $white;
+    background-color: transparent;
+    color: $white;
+    padding: 6px 8px;
+}
+
+%h3{
+    color: $white;
+    font-size: 18px;
+}
+
+%p{
+    font-size: 14px;
+    line-height: 1.7;
+    color: $grey;
+}
+
+@mixin card-img($width, $height) {
+    position: relative;
+    overflow: hidden;
+    width:$width;
+    height:$height;
+}
+
+@mixin rhombus ($wh){
+    width: $wh;
+    height: $wh;
+    background-color: $yellow;
+    transform: rotate(45deg);
+}
