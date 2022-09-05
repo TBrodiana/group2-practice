@@ -1,0 +1,271 @@
+
+//colors:
+$black: rgb(22,22,22);
+$yellow: rgb(241,201,23);
+$grey: rgba(176, 176, 176, 0.9);
+$white: rgb(255,255,255);
+
+@mixin fontProp($fs, $fw, $ls, $c){
+  font-size: $fs;
+  font-weight: $fw;
+  letter-spacing: $ls;
+  color: $c;
+  text-align: center;
+}
+@mixin button($c, $b, $bgrd){
+  color: $c;
+  border: $b;
+  background: $bgrd;
+}
+%img1{
+  position: relative;
+  max-width: 400px;
+  z-index: 4;
+}
+%homeSlide{
+  display: grid;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  position: relative;
+  -webkit-background-size: cover;
+  background-size: cover;
+  min-height: 100vh;
+  z-index: 1;
+}
+%homeSlideAfter{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,.4);
+  z-index: 2;
+}
+/* стили для корневого элемента слайдера */
+.itcss {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* стили для wrapper */
+.itcss__wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+
+.home_slide-1 {
+  background: url("assets/img/bg_3.jpg") center no-repeat;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+  @extend %homeSlide;
+    &:after{
+      @extend %homeSlideAfter;
+    }
+}
+.home_slide-2 {
+  background: url("assets/img/bg_1.jpg") center no-repeat;
+  margin: 50px auto 0px;
+  grid-auto-flow: column;
+  @extend %homeSlide;
+    &:after{
+      @extend %homeSlideAfter;
+    }
+    .slide-img-2{
+      @extend %img1;
+      //grid-column: 1/2;
+      //grid-row: 1/4;
+    }
+}
+.home_slide-3 {
+  background: url("assets/img/bg_1.jpg") center no-repeat;
+  margin: 50px auto 0px;
+  grid-auto-flow: column;
+  @extend %homeSlide;
+    &:after{
+      @extend %homeSlideAfter;
+    }
+    .slide-img-3{
+      @extend %img1;
+      //grid-column: 2/3;
+      //grid-row: 1/4;
+    }
+}
+
+
+
+
+/* дополнительные стили для этого примера */
+.itcss__items {
+  counter-reset: slide;
+
+  .itcss__item {
+    counter-increment: slide;
+
+    .slide_text-content {
+      display: grid;
+      align-items: start;
+      max-width: 60%;
+      margin: 0 auto;
+      position: relative;
+      z-index: 3;
+      h2 {
+        font-family: 'Nothing You Could Do', cursive;
+        margin: 5px;
+        @include fontProp(35px, 400, 3px, $yellow);
+      }
+      h1 {
+        font-family: 'Molengo', sans-serif;
+        text-transform: uppercase;
+        line-height: 4rem;
+        margin: 5px;
+        @include fontProp(45px, 500, 3px, $white);
+      }
+      p {
+        margin: 20px auto;
+        @include fontProp(16px, 400, 1px, $white);
+      }
+    }
+
+    .slide-btns {
+      display: grid;
+      grid-auto-flow: column;
+      justify-items: center;
+      justify-content: center;
+      align-items: center;
+      z-index: 5;
+      button{
+        margin: 10px;
+        padding: 15px;
+        font-family: 'Raleway', sans-serif;
+        &:hover{
+          @include button($black, 1px solid $grey, $grey);
+        }
+      }
+    }
+    .btn-order {
+      @include button($black, 1px solid $yellow, $yellow);
+    }
+    .btn-view {
+      @include button($white, 1px solid $white, rgba(0,0,0,0));
+    }
+  }
+}
+
+.itcss__item>div::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #fff;
+  font-style: italic;
+  font-size: 32px;
+  font-weight: bold;
+}
+/* стили для элемента, в котором непосредственно расположены элементы (слайды) */
+.itcss__items {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+/* класс для отключения transition */
+.transition-none {
+  transition: none;
+}
+
+/* стили для элементов */
+.itcss__item {
+  flex: 0 0 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+/* кнопки Prev и Next */
+.itcss__control {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 50px;
+  transform: translateY(-50%);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0.5;
+  user-select: none;
+  z-index: 30;
+}
+
+.itcss__control_show {
+  display: flex;
+}
+
+.itcss__control:hover,
+.itcss__control:focus {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.itcss__control_prev {
+  left: 0;
+}
+
+.itcss__control_next {
+  right: 0;
+}
+
+.itcss__control::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: transparent no-repeat center center;
+  background-size: 100% 100%;
+}
+
+.itcss__control_prev::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+}
+
+.itcss__control_next::before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+}
+
+/* Индикаторы */
+.itcss__indicators {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  padding-left: 0;
+  margin: 0 15%;
+  list-style: none;
+  user-select: none;
+}
+
+.itcss__indicator {
+  flex: 0 1 auto;
+  width: 30px;
+  height: 4px;
+  margin-right: 3px;
+  margin-left: 3px;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-clip: padding-box;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  cursor: pointer;
+}
+
+.itcss__indicator_active {
+  background-color: #fff;
+}
