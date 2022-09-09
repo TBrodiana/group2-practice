@@ -1,29 +1,58 @@
-.info {
+.info_section {
   max-height: 120vh;
-  padding-top: 6vw;
+  //padding-top: 4vw;
   padding-bottom: 6vw;
 
   .contact_info {
     background-color: black;
     display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1.5fr;
+    grid-column-gap: 10px;
+    padding-left: 8vw;
+
+    .contact_items {
+      //border: 1px solid red;
+      padding-top: 3vw;
+      padding-bottom: 2vw;
+      img {
+        position: absolute;
+      }
+    }
+
+    h3 {
+      font-family: 'Raleway', sans-serif;
+      color: white;
+      //text-align: center;
+      font-size: 18px;
+      text-transform: capitalize;
+      padding-left: 3vw;
+
+    }
+
+    .social_icons {
+      //border: 1px solid red;
+      display: grid;
+      background-color: #f7c35c;
+      padding-top: 3vw;
+
+      img {
+        width: 18px;
+        height: 18px;
+        margin: 20px;
+
+
+
+      }
+    }
+
+    p {
+      margin-top: 10px;
+      font-family: 'Raleway', sans-serif;
+      color: rgba(0, 0, 0, 0.5);
+      line-height: 30px;
+      font-size: 16px;
+      color: grey;
+      padding-left: 3vw;
+    }
   }
-
-  h2 {
-    font-family: 'Raleway', sans-serif;
-    color: white;
-    text-align: center;
-    font-size: 35px;
-    text-transform: uppercase;
-  }
-
-
-}
-
-p {
-  margin-top: 40px;
-  font-family: 'Raleway', sans-serif;
-  color: rgba(0, 0, 0, 0.5);
-  line-height: 30px;
-  font-size: 16px;
-  color: grey;
 }
