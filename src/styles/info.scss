@@ -1,7 +1,5 @@
 .info_section {
   max-height: 120vh;
-  //padding-top: 4vw;
-  padding-bottom: 6vw;
 
   .contact_info {
     background-color: black;
@@ -11,9 +9,9 @@
     padding-left: 8vw;
 
     .contact_items {
-      //border: 1px solid red;
       padding-top: 3vw;
-      padding-bottom: 2vw;
+      padding-bottom: 3vw;
+
       img {
         position: absolute;
       }
@@ -22,7 +20,6 @@
     h3 {
       font-family: 'Raleway', sans-serif;
       color: white;
-      //text-align: center;
       font-size: 18px;
       text-transform: capitalize;
       padding-left: 3vw;
@@ -30,7 +27,6 @@
     }
 
     .social_icons {
-      //border: 1px solid red;
       display: grid;
       background-color: #f7c35c;
       padding-top: 3vw;
@@ -39,7 +35,6 @@
         width: 18px;
         height: 18px;
         margin: 20px;
-
 
 
       }
@@ -53,6 +48,45 @@
       font-size: 16px;
       color: grey;
       padding-left: 3vw;
+    }
+  }
+}
+
+.welcome {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-image: url("assets/img/bg_4.jpg");
+
+  img{
+    position: relative;
+    width: 100%;
+  }
+
+  h2 {
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    font-size: 25px;
+    text-transform: uppercase;
+    padding-top: 8vw;
+    padding-left: 4vw;
+  }
+  p {
+    margin-top: 10px;
+    font-family: 'Raleway', sans-serif;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 30px;
+    font-size: 16px;
+    color: grey;
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+span{
+  color: #fac002;
+}
+  i{
+    img{
+      width: 50px;
+      padding-left:20px;
     }
   }
 }
