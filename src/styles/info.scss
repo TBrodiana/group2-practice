@@ -1,0 +1,29 @@
+.info {
+  max-height: 120vh;
+  padding-top: 6vw;
+  padding-bottom: 6vw;
+
+  .contact_info {
+    background-color: black;
+    display: grid;
+  }
+
+  h2 {
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+  }
+
+
+}
+
+p {
+  margin-top: 40px;
+  font-family: 'Raleway', sans-serif;
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 30px;
+  font-size: 16px;
+  color: grey;
+}
